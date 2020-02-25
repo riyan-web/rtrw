@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>SISTEM INFORMASI RT/RW PRUMNAS BENGKURAT PERMAI RT.09</title>
+    <title>SISTEM INFORMASI RT/RW</title>
     <!-- Favicon-->
-    <link rel="icon" href="https://demonya.xyz/sirt/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
      <style type="text/css">
         input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -62,11 +62,11 @@ input[type=number]::-webkit-outer-spin-button {
     <!-- Search Bar -->
     <div class="search-bar">
         <div class="search-icon">
-            <i class="material-icons">search</i>
+            <i class="material-icons">Cari</i>
         </div>
         <input type="text" placeholder="START TYPING...">
         <div class="close-search">
-            <i class="material-icons">close</i>
+            <i class="material-icons">Tutup</i>
         </div>
     </div>
     <!-- #END# Search Bar -->
@@ -78,7 +78,7 @@ input[type=number]::-webkit-outer-spin-button {
                 <div class="col-md-10">
                     <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="https://demonya.xyz/sirt/index.php/Home">SISTEM INFORMASI RT/RW PRUMNAS BENGKURAT PERMAI RT.09</a>
+                <a class="navbar-brand" href="home-admin.php">SISTEM INFORMASI RT/RW</a>
                 </div>
                 
                 
@@ -103,58 +103,58 @@ input[type=number]::-webkit-outer-spin-button {
             <div class="menu">
                 
 <ul class="list">
-                    <li class="header">MENU WARGA</li>
-                    <li><a href="https://demonya.xyz/sirt/index.php/Auth/LogOut/">
+<li class="header">MENU WARGA</li>
+                    <li><a href="logout.php">
                         <i class="material-icons">input</i>
-                        <span>Log Out</span>
+                        <span>Keluar</span>
                     </a></li>
                     <li class="active">
-                        <a href="https://demonya.xyz/sirt/index.php/Home">
+                        <a href="home-admin.php">
                             <i class="material-icons">home</i>
-                            <span>Dashboard</span>
+                            <span>Beranda</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Home/status_pengajuan/">
+                        <a href="pengajuan-surat.php">
                             <i class="material-icons">mail</i>
                             <span>Status Pengajuan Surat</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Home/iuran/">
+                        <a href="iuran-bulanan.php">
                             <i class="material-icons">money</i>
                             <span>Iuran Bulanan</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Warga/profil/327">
+                        <a href="profil.php">
                             <i class="material-icons">person</i>
                             <span>Profil</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Keuangan/laporan/">
+                        <a href="laporan-keuangan-rt.php">
                             <i class="material-icons">book</i>
                             <span>Laporan Keuangan RT</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/RW/laporan_keuangan/">
+                        <a href="laporan-keuangan-rw.php">
                             <i class="material-icons">book</i>
                             <span>Laporan Keuangan RW</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Home/update_password">
+                        <a href="gantipassword.php">
                             <i class="material-icons">lock</i>
-                            <span>Update Password</span>
+                            <span>Ganti Password</span>
                         </a>
                     </li>
                     
                     <li class="header">MENU ADMIN</li>
                     
                     <li>
-                        <a href="https://demonya.xyz/sirt/index.php/Admin">
+                        <a href="dashboard-admin.php">
                             <i class="material-icons">home</i>
                             <span>Dashboard</span>
                         </a>
@@ -169,11 +169,11 @@ input[type=number]::-webkit-outer-spin-button {
             <!-- #Menu -->
             <!-- Footer -->
             <div class="legal">
-                <div class="copyright">
-                    &copy; 2020 <a href="javascript:void(0);">Sistem Informasi RT/RW</a>.
+				<div class="copyright">
+                    &copy; 2020 <a href="home-admin.php">Sistem Informasi RT/RW</a>.
                 </div>
                 <div class="version">
-                    <b>Version: </b> 1.0.5
+                    <b>Version: </b> BETA
                 </div>
             </div>
             <!-- #Footer -->
@@ -183,17 +183,12 @@ input[type=number]::-webkit-outer-spin-button {
     </section>
 
     <section class="content">
-      <div class="row">
-           <div class="col-md-12">
-                <a href="https://shopee.co.id/product/54371697/1892316828/" class="btn btn-danger btn-block btn-lg">Pesan Produk</a>
-            </div>
-      </div>
       <hr>
         <div class="container-fluid">
                 </div>
 
             <div class="card">
-	<div class="header bg-blue">Status Iuran Bulanan</div>
+	<div class="header bg-blue">Iuran Bulanan</div>
 	<div class="body">
 		<table class="table table-bordered table-striped table-hover dataTable js-basic-example">
 			<thead>
@@ -204,236 +199,7 @@ input[type=number]::-webkit-outer-spin-button {
 				<th>Aksi</th>
 			</thead>
 			<tbody>
-								<tr>
-					<td>1</td>
-					<td>Januari</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/7" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>2</td>
-					<td>Oktober 2019</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/8" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>3</td>
-					<td>September</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/9" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>4</td>
-					<td>AGUS F7/NOVEMBER</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/10" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>5</td>
-					<td>HADI / F6 NO 5</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/11" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>6</td>
-					<td>KAS BLN 0KTOBER 2019</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/12" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>7</td>
-					<td>Bulan Januari</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/13" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>8</td>
-					<td>Bulanan satpam</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/14" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>9</td>
-					<td>Sampah</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/15" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>10</td>
-					<td>AA</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/16" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>11</td>
-					<td>AA</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/17" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>12</td>
-					<td>IPL</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/18" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>13</td>
-					<td>Air</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/19" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>14</td>
-					<td>November 2019</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/20" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>15</td>
-					<td>121</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/21" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>16</td>
-					<td>bonero</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/22" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>17</td>
-					<td>Iuran Kas RT</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/23" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>18</td>
-					<td>Tesr</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/24" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>19</td>
-					<td>jffdddddd</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/25" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>20</td>
-					<td>TEST DES 2019</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/26" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>21</td>
-					<td>IPL Bulan Desember</td>
-					<td>2019</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/27" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>22</td>
-					<td>apa aja boleh</td>
-					<td>2020</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/28" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
-							<tr>
-					<td>23</td>
-					<td>keamanan</td>
-					<td>2020</td>
-					<td>						<label class="label bg-orange">Belum Bayar</label>
-											</td>
-					<td>
-												<a href="https://demonya.xyz/sirt/index.php/Home/bayar_iuran/29" class="btn btn-primary">Bayar</a>
-											</td>
-				</tr>
+				
 						</tbody>
 		</table>
 	</div>

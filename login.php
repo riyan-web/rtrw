@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>SISTEM INFORMASI RT/RW PRUMNAS BENGKURAT PERMAI RT.09</title>
+    <title>SISTEM INFORMASI RT/RW</title>
     <!-- Favicon-->
     <link rel="icon" href="https://demonya.xyz/sirt/assets/favicon.ico" type="image/x-icon">
 
@@ -29,19 +29,18 @@
     <div class="login-box">
         <div class="logo" style="width: 100%; color: white;"><center>
             <h3>SISTEM INFORMASI RT/RW </h3>
-            <h5>PRUMNAS BENGKURAT PERMAI RT.09</h5>
             </center>
         </div>
         <div class="card">
             <div class="body">
                                  <form id="sign_in" action="https://demonya.xyz/sirt/index.php/Auth/doLogin" method="POST">
-                    <div class="msg">Gunakan Nomor KTP anda untuk Login</div>
+                    <div class="msg">Gunakan NIK untuk Login</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="username" placeholder="Nomor KTP" required autofocus>
+                            <input type="text" class="form-control" name="username" placeholder="Nomor Induk Kependudukan" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -60,43 +59,6 @@
                     </div>
                     
                 </form>
-            </div>
-        </div>
-        <div class="card">
-            <div class="body bg-orange">
-                Informasi Login
-                <table class="table" style="width: 100%">
-                    <tr>
-                        <td>Role</td>
-                        <td>Username</td>
-                        <td>Password</td>
-                    </tr>
-                    <tr>
-                        <td>Admin</td>
-                        <td>admin</td>
-                        <td>admin</td>
-                    </tr>
-                    <tr>
-                        <td>Ketua RW</td>
-                        <td>123456</td>
-                        <td>123456</td>
-                    </tr>
-                    <tr>
-                        <td>Ketua RT</td>
-                        <td>1234567</td>
-                        <td>1234567</td>
-                    </tr>
-                    <tr>
-                        <td>Bendahara RT</td>
-                        <td>12345678</td>
-                        <td>12345678</td>
-                    </tr>
-                    <tr>
-                        <td>Sekretaris RT</td>
-                        <td>123456789</td>
-                        <td>123456789</td>
-                    </tr>
-                </table>
             </div>
         </div>
     </div>
