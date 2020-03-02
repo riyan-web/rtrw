@@ -6,9 +6,15 @@ class Overview extends CI_Controller {
 		parent::__construct();
 	}
 
+	public function login()
+	{
+        // load view login.php
+		$this->load->view("admin/login");
+	}
+
 	public function index()
 	{
-        // load view admin/overview.php
+		// load view overview.php atau indexnya
 		$this->load->view("admin/overview");
 	}
 }
