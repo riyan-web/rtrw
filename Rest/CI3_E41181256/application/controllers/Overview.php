@@ -5,13 +5,7 @@ class Overview extends CI_Controller {
     {
 		parent::__construct();
 	}
-
-	public function login()
-	{
-        // load view login.php
-		$this->load->view("admin/login");
-	}
-
+	
 	public function index()
 	{
 		// load view overview.php atau indexnya
@@ -52,10 +46,5 @@ class Overview extends CI_Controller {
 	{
 		// load view tables.php
 		$this->load->view("admin/tables");
-	}
-
-	public function ceklog()
-	{
-		$this->load->view("admin/cek_login");
 	}
 }

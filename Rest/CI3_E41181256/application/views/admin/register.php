@@ -42,7 +42,7 @@
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="<?php echo base_url()?>index.php/Overview/login">Have an account? Go to login</a></div>
+                                        <div class="small"><a href="<?php echo base_url()?>index.php/login">Have an account? Go to login</a></div>
                                     </div>
                                 </div>
                             </div>
