@@ -53,4 +53,9 @@ class Overview extends CI_Controller {
 		// load view tables.php
 		$this->load->view("admin/tables");
 	}
+
+	public function ceklog()
+	{
+		$this->load->view("admin/cek_login");
+	}
 }
