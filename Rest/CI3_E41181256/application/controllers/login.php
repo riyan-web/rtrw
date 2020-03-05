@@ -15,13 +15,10 @@ class Login extends CI_Controller{
 	function aksi_login(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		$where = array(
-			'username' => $username,
-			'pass' => $password
-			);
-		$cek = $this->m_login->cek_login("tb_login",$where)->num_rows();
-		if($cek != FALSE){
-
+		$this->db->where('username',$username);
+		$this->db->where('pass',$password);
+		$cek = $this->db->get("tb_login ")->row_array();
+		if($cek > 0 ){
 			redirect(base_url("index.php/Overview"));
 
 		}else{
