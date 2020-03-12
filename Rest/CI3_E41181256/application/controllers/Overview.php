@@ -4,6 +4,9 @@ class Overview extends CI_Controller {
     public function __construct()
     {
 		parent::__construct();
+		$this->load->model('m_data');
+                $this->load->helper('url');
+
 	}
 	
 	public function index()
@@ -30,6 +33,11 @@ class Overview extends CI_Controller {
 		$this->load->view("admin/register");
 	}
 
+	public function login()
+	{
+		$this->load->view("admin/login");
+	}
+
 	public function password()
 	{
 		// load view password.php
@@ -45,6 +53,7 @@ class Overview extends CI_Controller {
 	public function tables()
 	{
 		// load view tables.php
-		$this->load->view("admin/tables");
+		$data['users'] = $this->m_data->tampil_data()->result();
+		$this->load->view('admin/tables',$data);
 	}
 }

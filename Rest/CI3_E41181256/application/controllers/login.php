@@ -18,7 +18,7 @@ class Login extends CI_Controller{
 		$this->db->where('username',$username);
 		$this->db->where('pass',$password);
 		$cek = $this->db->get("tb_login ")->row_array();
-		if($cek > 0 ){
+		if($cek > 0){
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login"
@@ -33,6 +33,7 @@ class Login extends CI_Controller{
 	}
 
 	function logout(){
+		$this->session->unse_userdata(array('nama' => ''));
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}
