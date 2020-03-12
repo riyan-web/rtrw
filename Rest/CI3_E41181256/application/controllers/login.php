@@ -19,8 +19,14 @@ class Login extends CI_Controller{
 		$this->db->where('pass',$password);
 		$cek = $this->db->get("tb_login ")->row_array();
 		if($cek > 0 ){
-			redirect(base_url("index.php/Overview"));
+			$data_session = array(
+				'nama' => $username,
+				'status' => "login"
+				);
+ 
+			$this->session->set_userdata($data_session);
 
+			redirect(base_url("index.php/Overview"));
 		}else{
 			echo "<script>alert('Username atau Password Salah!');history.go(-1);</script>";
 		}
