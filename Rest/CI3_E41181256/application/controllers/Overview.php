@@ -65,23 +65,56 @@ class Overview extends CI_Controller {
 	function hapus($id){
 		$where = array('user_id' => $id);
 		$this->m_data->hapus_data($where,'users');
-		redirect('admin/tables');
+		redirect('Overview/tables');
 	}
 
 	function tambah_aksi(){
-		$nama = $this->input->post('full_name');
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
-		$username = $this->input->post('username');
-		$role = $this->input->post('role');
-		$phone = $this->input->post('phone');
+		$nama = $this->input->post('inputFullname');
+		$email = $this->input->post('inputEmail');
+		$password = $this->input->post('inputPassword');
+		$username = $this->input->post('inputUsername');
+		$role = $this->input->post('inputRole');
+		$phone = $this->input->post('inputPhone');
  
 		$data = array(
-			'nama' => $nama,
-			'alamat' => $alamat,
-			'pekerjaan' => $pekerjaan
+			'username' => $username,
+			'password' => $password,
+			'email' => $email,
+			'full_name' => $nama,
+			'phone' => $phone,
+			'role' => $role
 			);
 		$this->m_data->input_data($data,'users');
-		redirect('admin/tables');
+		redirect('Overview/tables');
 	}
+}
+function edit($id) {
+	$where = array('user_id' => $id);
+	$data['users'] = $this->m_data->edit_data($where,'users')->result();
+	$this->load->view('admin/edit',$data);
+}
+function update(){
+	$id = $this->input->post('inputId');
+	$nama = $this->input->post('inputFullname');
+	$email = $this->input->post('inputEmail');
+	$password = $this->input->post('inputPassword');
+	$username = $this->input->post('inputUsername');
+	$role = $this->input->post('inputRole');
+	$phone = $this->input->post('inputPhone');
+ 
+	$data = array(
+		'username' => $username,
+		'password' => $password,
+		'email' => $email,
+		'full_name' => $nama,
+		'phone' => $phone,
+		'role' => $role
+	);
+ 
+	$where = array(
+		'user_id' => $id
+	);
+ 
+	$this->m_data->update_data($where,$data,'users');
+	redirect('Overview/tables');
 }

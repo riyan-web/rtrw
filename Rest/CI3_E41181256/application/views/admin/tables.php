@@ -129,8 +129,8 @@
                                                 <td><?php echo $u->phone ?></td>
                                                 <td><?php echo $u->role ?></td>
                                                 <td>
-                                                    <button class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview">Edit</button>
-                                                    <button class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview">Delete</button>
+                                                    <?php echo anchor('Overview/edit/'.$u->user_id,'Edit'); ?>
+                                                    <?php echo anchor('Overview/hapus/'.$u->user_id,'Hapus'); ?>
                                                 </td>
                                             </tr>
                                         </tbody>

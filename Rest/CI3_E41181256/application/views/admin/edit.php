@@ -106,19 +106,19 @@
                         <div class="card mb-4">
                             <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
                             <div class="card-body">
-                                <form action="<?php echo base_url()?>index.php/Overview/tambah_aksi" method="post">
-                                    <div class="form-group"><label class="small mb-1" for="inputFullname">Fullname</label><input class="form-control py-4" name="inputFullname" type="text" placeholder="Enter Fullname" /></div>
-                                    <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" name="inputUsername" type="text" placeholder="Enter Username" /></div>
-                                    <div class="form-group"><label class="small mb-1" for="inputEmail">Email</label><input class="form-control py-4" name="inputEmail" type="email" placeholder="Enter Email" /></div>
-                                    <div class="form-group"><label class="small mb-1" for="inputPhone">Phone Number</label><input class="form-control py-4" name="inputPhone" type="text" placeholder="Enter Phone Number" /></div>
-                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" name="inputPassword" type="password" placeholder="Enter password" /></div>
+                                <form action="<?php echo base_url()?>index.php/Overview/update" method="post">
+                                    <div class="form-group"><input class="form-control py-4" name="inputId" type="hidden" placeholder="Enter Fullname" value="<?php echo $u->$user_id ?>" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputFullname">Fullname</label><input class="form-control py-4" name="inputFullname" type="text" placeholder="Enter Fullname" value="<?php echo $u->$user_id ?>" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" name="inputUsername" type="text" placeholder="Enter Username" value="<?php echo $u->$user_id ?>" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputEmail">Email</label><input class="form-control py-4" name="inputEmail" type="email" placeholder="Enter Email" value="<?php echo $u->$user_id ?>" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPhone">Phone Number</label><input class="form-control py-4" name="inputPhone" type="text" placeholder="Enter Phone Number" value="<?php echo $u->$user_id ?>" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" name="inputPassword" type="password" placeholder="Enter password" value="<?php echo $u->$user_id ?>" /></div>
                                     <div class="form-group"><label class="small mb-1" for="inputRole">Role</label>
                                         <select name="inputRole" class="form-control"> 
                                             <option value="admin">Admin</option>
                                             <option value="customer">User</option>
                                         </select>
                                     </div>
-                                    <div class="form-group"><button class="btn btn-primary" type="submit">Add</button>
                                 </form>
                             </div>
                             <div class="card-header"><a class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview/tables">Back</a></div>
