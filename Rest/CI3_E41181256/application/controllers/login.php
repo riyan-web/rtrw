@@ -16,8 +16,8 @@ class Login extends CI_Controller{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$this->db->where('username',$username);
-		$this->db->where('pass',$password);
-		$cek = $this->db->get("tb_login ")->row_array();
+		$this->db->where('password',$password);
+		$cek = $this->db->get("users")->row_array();
 		if($cek > 0){
 			$data_session = array(
 				'nama' => $username,

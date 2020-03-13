@@ -106,41 +106,22 @@
                         <div class="card mb-4">
                             <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama</th>
-                                                <th>Email</th>
-                                                <th>Username</th>
-                                                <th>No. Telp</th>
-                                                <th>Jabatan</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                            <?php
-                                                foreach($users as $u) {
-                                            ?>
-                                        <tbody>
-                                            <tr>
-                                                <td><?php echo $u->full_name ?></td>
-                                                <td><?php echo $u->email ?></td>
-                                                <td><?php echo $u->username ?></td>
-                                                <td><?php echo $u->phone ?></td>
-                                                <td><?php echo $u->role ?></td>
-                                                <td>
-                                                    <button class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview">Edit</button>
-                                                    <button class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview">Delete</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                            <?php
-                                                }
-                                            ?>
-                                    </table>
-                                </div>
+                                <form action="<?php echo base_url()?>index.php/Overview/tambah_aksi" method="post">
+                                    <div class="form-group"><label class="small mb-1" for="inputFullname">Fullname</label><input class="form-control py-4" name="inputFullname" type="text" placeholder="Enter Fullname" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" name="inputUsername" type="text" placeholder="Enter Username" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputEmail">Email</label><input class="form-control py-4" name="inputEmail" type="email" placeholder="Enter Email" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPhone">Phone Number</label><input class="form-control py-4" name="inputPhone" type="text" placeholder="Enter Phone Number" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" name="inputPassword" type="password" placeholder="Enter password" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputRole">Role</label>
+                                        <select name="inputRole" class="form-control"> 
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group"><button class="btn btn-primary" type="submit">Add</button>
+                                </form>
                             </div>
-                            <div class="card-header"><a class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview/input">Add</a></div>
+                            <div class="card-header"><a class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview/tables">Back</a></div>
                         </div>
                     </div>
                 </main>

@@ -50,10 +50,38 @@ class Overview extends CI_Controller {
 		$this->load->view("admin/charts");
 	}
 
+	public function input()
+	{
+		$this->load->view("admin/input");
+	}
+
 	public function tables()
 	{
 		// load view tables.php
 		$data['users'] = $this->m_data->tampil_data()->result();
 		$this->load->view('admin/tables',$data);
+	}
+
+	function hapus($id){
+		$where = array('user_id' => $id);
+		$this->m_data->hapus_data($where,'users');
+		redirect('admin/tables');
+	}
+
+	function tambah_aksi(){
+		$nama = $this->input->post('full_name');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		$username = $this->input->post('username');
+		$role = $this->input->post('role');
+		$phone = $this->input->post('phone');
+ 
+		$data = array(
+			'nama' => $nama,
+			'alamat' => $alamat,
+			'pekerjaan' => $pekerjaan
+			);
+		$this->m_data->input_data($data,'users');
+		redirect('admin/tables');
 	}
 }
