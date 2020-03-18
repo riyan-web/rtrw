@@ -9,31 +9,34 @@ class Login extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('admin/login');
+		$this->load->view('v_login');
 	}
 
 	function aksi_login(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		$this->db->where('username',$username);
-		$this->db->where('password',$password);
-		$cek = $this->db->get("users")->row_array();
+		$where = array(
+			'username' => $username,
+			'password' => md5($password)
+			);
+		$cek = $this->m_login->cek_login("tb_login",$where)->num_rows();
 		if($cek > 0){
+
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login"
 				);
- 
+
 			$this->session->set_userdata($data_session);
 
-			redirect(base_url("index.php/Overview"));
+			redirect(base_url("admin"));
+
 		}else{
-			echo "<script>alert('Username atau Password Salah!');history.go(-1);</script>";
+			echo "Username dan password salah !";
 		}
 	}
 
 	function logout(){
-		$this->session->unse_userdata(array('nama' => ''));
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}

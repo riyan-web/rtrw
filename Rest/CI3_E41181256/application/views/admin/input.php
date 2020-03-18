@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Sidenav Light - SB Admin</title>
+        <title>Dashboard - SB Admin</title>
         <link href="<?php echo base_url('assets/css/styles.css') ?>" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -95,13 +95,33 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Sidenav Light</h1>
+                        <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="<?php echo base_url()?>index.php/Overview">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Sidenav Light</li>
+                            <li class="breadcrumb-item active">Tables</li>
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">This page is an example of using the light side navigation option. By appending the <code>.sb-sidenav-light</code> class to the <code>.sb-sidenav</code> class, the side navigation will take on a light color scheme. The <code>.sb-sidenav-dark</code> is also available for a darker option.</div>
+                            <div class="card-body">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>.</div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
+                            <div class="card-body">
+                                <form action="<?php echo base_url()?>index.php/Overview/tambah_aksi" method="post">
+                                    <div class="form-group"><label class="small mb-1" for="inputFullname">Fullname</label><input class="form-control py-4" name="inputFullname" type="text" placeholder="Enter Fullname" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputUsername">Username</label><input class="form-control py-4" name="inputUsername" type="text" placeholder="Enter Username" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputEmail">Email</label><input class="form-control py-4" name="inputEmail" type="email" placeholder="Enter Email" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPhone">Phone Number</label><input class="form-control py-4" name="inputPhone" type="text" placeholder="Enter Phone Number" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" name="inputPassword" type="password" placeholder="Enter password" /></div>
+                                    <div class="form-group"><label class="small mb-1" for="inputRole">Role</label>
+                                        <select name="inputRole" class="form-control"> 
+                                            <option value="admin">Admin</option>
+                                            <option value="customer">User</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group"><button class="btn btn-primary" type="submit">Add</button>
+                                </form>
+                            </div>
+                            <div class="card-header"><a class="btn btn-primary" href="<?php echo base_url()?>index.php/Overview/tables">Back</a></div>
                         </div>
                     </div>
                 </main>
@@ -122,5 +142,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="<?php echo base_url()?>js/scripts.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="<?php echo base_url()?>assets/demo/datatables-demo.js"></script>
     </body>
 </html>
