@@ -5,7 +5,6 @@ class Belajar extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
 		
 	}
 
@@ -28,11 +27,6 @@ class Belajar extends CI_Controller {
     
     public function halo3(){
         $this->load->view('view_belajar3');
-	}
-	
-	function user(){
-		$data['tb_barang'] = $this->m_data->ambil_data()->result();
-		$this->load->view('v_barang.php',$data);
 	}
 
 
